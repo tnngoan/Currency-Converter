@@ -1,0 +1,42 @@
+body{
+    background-color: pink;
+}
+
+h1{
+    font-weight: 700;
+    color: #1c69aa;
+    text-shadow: 1px 1px 2px white, 0 0 15px pink, 0 0 5px black;
+}
+nav{
+    background-color: white;
+    border-bottom: 5px solid #01BAEF;
+    border-top: 5px solid #01BAEF;
+}
+.background-div{
+    width: 100%;
+    background-image: url('https://ak.picdn.net/shutterstock/videos/26916550/thumb/1.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color:#010101;
+    color: whitesmoke;
+    border-bottom: 5px solid #01BAEF;
+}
+footer{
+    border-top: 5px solid #01BAEF;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #010101;
+}
+hr{
+    background-color: white;   
+}
+
+.align-center{
+align-items: center;
+text-align: center;
+}
+.jumbotron{
+    width: 100%;
+}
