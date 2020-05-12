@@ -9,17 +9,18 @@
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
 </head>
 
-<body width='100%'>
-    <nav class=" fixed-top navbar navbar-light bg-light">
+<body>
+    <nav class="fixed-top navbar navbar-light bg-light">
         <a class="navbar-brand" href="index.html">
             <img src='img/logo.png' />
         </a>
         <h1>The World's Trusted Currency Authority</h1>
     </nav>
-    <div class="mr-0 jumbotron pt-5 mt-5 background-div jumbotron-fluid">
+
+    <section class="mr-0 pr-0 jumbotron pt-5 mt-5 background-div" style='height: 450px'>
         <div class='container'>
             <h1 class="display-4 pt-5 pb-3">Money Converter</h1>
             <div class='col d-flex justify-content-between'>
@@ -27,44 +28,51 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">amount</span>
                     </div>
-                    <input type="text" class="form-control" placeholder="$$"
+                    <input id='inputAmount' type="number" class="form-control" placeholder="$$"
                         aria-label="Dollar amount (with dot and two decimal places)">
                 </div>
                 <div class="container input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
-                        <option selected>VND</option>
-                        <option value="1">VND</option>
-                        <option value="2">USD</option>
-                        <option value="3">KRW</option>
+                    <select id="cin" class="custom-select">
+                        <option value="USD" selected>USD</option>
+                        <option value="VND">VND</option>
+                        <!-- <option value="YEN">JPY</option> -->
+                        <option value="KRW">KRW</option>
+                        <option value="EUR">EUR</option>
+                        <!-- <option value="EUR">GBP</option>
+                        <option value="EUR">CAD</option>
+                        <option value="EUR">AUD</option> -->
                     </select>
                     <div class="input-group-append">
                         <label class="input-group-text" for="inputGroupSelect02">Options</label>
                     </div>
                 </div>
                 <div class="container input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
-                        <option selected>USD</option>
-                        <option value="1">USD</option>
-                        <option value="2">KRW</option>
-                        <option value="3">VND</option>
+                    <select id="cout" class="custom-select">
+                        <option value="VND" selected>VND</option>
+                        <option value="USD">USD</option>
+                        <option value="KRW">KRW</option>
+                        <!-- <option value="YEN">JPY</option> -->
+                        <option value="EUR">EUR</option>
+                        <!-- <option value="EUR">GBP</option>
+                        <option value="EUR">CAD</option>
+                        <option value="EUR">AUD</option> -->
                     </select>
                     <div class="input-group-append">
                         <label class="input-group-text" for="inputGroupSelect02">Options</label>
                     </div>
                 </div>
                 <div class='container'>
-                    <button type="button" class="btn btn-info">CONVERT</button>
+                    <button onclick="convert()" id='convertButton' class="btn btn-info">CONVERT</button>
                 </div>
             </div>
         </div>
         <hr class="my-4 mb-5">
         <div class='container'>
-            <p>All figures are live mid-market rates, which are not available to consumers and are for informational
-                purposes only. To see the rates we quote for money transfer, please select Live Money Transfer Rates.
-            </p>
+            <h1 style='text-align: center;' id='resultArea'></h1>
         </div>
-    </div>
-    <div>
+    </section>
+
+    <main>
         <div class='d-flex align-center justify-content-around'>
             <h2>EXCHANGE RATES:</h2>
             <div>
@@ -105,9 +113,9 @@
                 <h4>5367.73vnd</h4>
             </div>
         </div>
-    </div>
+    </main>
 
-    <footer class='mt-5 pt-5'>
+    <footer class='mt-5 pt-5 container-fluid'>
         <div class='container'>
             <a title='nhungoan ' href='#'>
                 <i class="fab fa-linkedin-in"></i>
@@ -115,7 +123,8 @@
             <a title='anonair1920' href='https://github.com/anonair1920'>
                 <i class="fab fa-github"></i>
             </a>
-            <a title='andrecee.tnn@gmail.com' href='https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrgljxpplzTtSSDsHPDNwRtBqlhFhHwXDzVzhXKwLXsBjbHCDpXhBgwsCZwPXbPDhDzQSV'>
+            <a title='andrecee.tnn@gmail.com'
+                href='https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrgljxpplzTtSSDsHPDNwRtBqlhFhHwXDzVzhXKwLXsBjbHCDpXhBgwsCZwPXbPDhDzQSV'>
                 <i class="far fa-envelope"></i>
             </a>
         </div>
@@ -130,7 +139,7 @@
         </div>
     </footer>
 
-    <script src='main.js'></script>
+    <script src='js/main.js'></script>
 </body>
 
 </html>
