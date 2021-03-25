@@ -69,7 +69,7 @@ function formatCurrency(type, value) {
 }
 
 function convert() {
-  if (inputC.value === "USD" && outputC.value === "VND") {
+    if (inputC.value === "USD" && outputC.value === "VND") {
     result = usd2Vnd();
   } else if (inputC.value === "VND" && outputC.value === "USD") {
     result = vnd2Usd();
